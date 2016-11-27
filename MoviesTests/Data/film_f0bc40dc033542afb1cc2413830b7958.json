@@ -1,0 +1,43 @@
+{
+    "subtitle":null,
+    "uid":"film_f0bc40dc033542afb1cc2413830b7958",
+    "schedule_urls":[
+                     "/api/schedules/sche_9b9114fcffbc4b63acfe7ee9421cec40/"
+                     ],
+    "image_urls":[
+    
+    ],
+    "publish_on":"2015-03-10T00:00:00+00:00",
+    "talent_urls":[
+    
+    ],
+    "schedule_url":"/api/schedules/sche_9b9114fcffbc4b63acfe7ee9421cec40/",
+    "plan_urls":[
+    
+    ],
+    "language_publish_on":"2015-03-10T00:00:00+00:00",
+    "episode_number":null,
+    "language_modified_by":null,
+    "slug":"little-red-riding-hood-up-to-date-1945",
+    "language_version_url":"/api/episodes/film_f0bc40dc033542afb1cc2413830b7958/language-versions/0/",
+    "version_number":0,
+    "modified_by":null,
+    "language_ends_on":"2100-01-01T00:00:00+00:00",
+    "title":"Little Red Riding Hood Up-to-date",
+    "items":[
+             "/api/assets/asse_4a59b677a3064805be4f309b1098969a/"
+             ],
+    "self":"/api/episodes/film_f0bc40dc033542afb1cc2413830b7958/",
+    "created":"2015-03-11T13:42:41.523000+00:00",
+    "modified":"2015-03-11T13:42:41.523000+00:00",
+    "created_by":null,
+    "tag_urls":[
+    
+    ],
+    "ends_on":"2100-01-01T00:00:00+00:00",
+    "synopsis":"",
+    "version_url":"/api/episodes/film_f0bc40dc033542afb1cc2413830b7958/versions/0/",
+    "parent_url":null,
+    "language_version_number":0,
+    "language_modified":"2015-03-11T13:42:41.523000+00:00"
+}

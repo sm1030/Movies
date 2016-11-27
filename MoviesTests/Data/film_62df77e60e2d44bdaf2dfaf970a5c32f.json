@@ -1,0 +1,43 @@
+{
+    "subtitle":null,
+    "uid":"film_62df77e60e2d44bdaf2dfaf970a5c32f",
+    "schedule_urls":[
+                     "/api/schedules/sche_2de8960a125146a9b16aefe5ecebf0b1/"
+                     ],
+    "image_urls":[
+    
+    ],
+    "publish_on":"2015-03-10T00:00:00+00:00",
+    "talent_urls":[
+    
+    ],
+    "schedule_url":"/api/schedules/sche_2de8960a125146a9b16aefe5ecebf0b1/",
+    "plan_urls":[
+    
+    ],
+    "language_publish_on":"2015-03-10T00:00:00+00:00",
+    "episode_number":null,
+    "language_modified_by":null,
+    "slug":"a-white-christmas-1927",
+    "language_version_url":"/api/episodes/film_62df77e60e2d44bdaf2dfaf970a5c32f/language-versions/0/",
+    "version_number":0,
+    "modified_by":null,
+    "language_ends_on":"2100-01-01T00:00:00+00:00",
+    "title":"'White' Christmas  Topical Budget 853-1",
+    "items":[
+             "/api/assets/asse_22e39711b01f460eb21b812405affb72/"
+             ],
+    "self":"/api/episodes/film_62df77e60e2d44bdaf2dfaf970a5c32f/",
+    "created":"2015-03-11T13:42:09.610000+00:00",
+    "modified":"2015-03-11T13:42:09.610000+00:00",
+    "created_by":null,
+    "tag_urls":[
+    
+    ],
+    "ends_on":"2100-01-01T00:00:00+00:00",
+    "synopsis":"",
+    "version_url":"/api/episodes/film_62df77e60e2d44bdaf2dfaf970a5c32f/versions/0/",
+    "parent_url":null,
+    "language_version_number":0,
+    "language_modified":"2015-03-11T13:42:09.610000+00:00"
+}

@@ -1,0 +1,43 @@
+{
+    "subtitle":null,
+    "uid":"film_7a99b420e91e4513ac56cf12f3fb82f8",
+    "schedule_urls":[
+                     "/api/schedules/sche_ca17b2c342fe47dea77f2f0fe54ca904/"
+                     ],
+    "image_urls":[
+    
+    ],
+    "publish_on":"2015-03-10T00:00:00+00:00",
+    "talent_urls":[
+    
+    ],
+    "schedule_url":"/api/schedules/sche_ca17b2c342fe47dea77f2f0fe54ca904/",
+    "plan_urls":[
+    
+    ],
+    "language_publish_on":"2015-03-10T00:00:00+00:00",
+    "episode_number":null,
+    "language_modified_by":null,
+    "slug":"christmas-celebrations-and-the-cruel-cat-1969",
+    "language_version_url":"/api/episodes/film_7a99b420e91e4513ac56cf12f3fb82f8/language-versions/0/",
+    "version_number":0,
+    "modified_by":null,
+    "language_ends_on":"2100-01-01T00:00:00+00:00",
+    "title":"Christmas Celebrations and the Cruel Cat",
+    "items":[
+             "/api/assets/asse_1454a1f0f17746ebbab0a5890b53f7a3/"
+             ],
+    "self":"/api/episodes/film_7a99b420e91e4513ac56cf12f3fb82f8/",
+    "created":"2015-03-11T13:45:23.758000+00:00",
+    "modified":"2015-03-11T13:45:23.758000+00:00",
+    "created_by":null,
+    "tag_urls":[
+    
+    ],
+    "ends_on":"2100-01-01T00:00:00+00:00",
+    "synopsis":"",
+    "version_url":"/api/episodes/film_7a99b420e91e4513ac56cf12f3fb82f8/versions/0/",
+    "parent_url":null,
+    "language_version_number":0,
+    "language_modified":"2015-03-11T13:45:23.758000+00:00"
+}

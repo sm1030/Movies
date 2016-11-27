@@ -1,5 +1,5 @@
 //
-//  AppController.swift
+//  MainController.swift
 //  Movies
 //
 //  Created by Alexandre Malkov on 27/11/2016.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-class AppController {
+class MainController {
     
 }

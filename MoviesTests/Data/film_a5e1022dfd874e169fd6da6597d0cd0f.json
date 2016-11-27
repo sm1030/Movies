@@ -1,0 +1,43 @@
+{
+    "subtitle":null,
+    "uid":"film_a5e1022dfd874e169fd6da6597d0cd0f",
+    "schedule_urls":[
+                     "/api/schedules/sche_e84785a815fb435faa2348393ec4e8b8/"
+                     ],
+    "image_urls":[
+    
+    ],
+    "publish_on":"2015-03-10T00:00:00+00:00",
+    "talent_urls":[
+    
+    ],
+    "schedule_url":"/api/schedules/sche_e84785a815fb435faa2348393ec4e8b8/",
+    "plan_urls":[
+    
+    ],
+    "language_publish_on":"2015-03-10T00:00:00+00:00",
+    "episode_number":null,
+    "language_modified_by":null,
+    "slug":"seeing-the-new-year-in-1915",
+    "language_version_url":"/api/episodes/film_a5e1022dfd874e169fd6da6597d0cd0f/language-versions/0/",
+    "version_number":0,
+    "modified_by":null,
+    "language_ends_on":"2100-01-01T00:00:00+00:00",
+    "title":"Seeing the New Year In",
+    "items":[
+             "/api/assets/asse_7b805a29d4414e9a99eba899e2f384a3/"
+             ],
+    "self":"/api/episodes/film_a5e1022dfd874e169fd6da6597d0cd0f/",
+    "created":"2015-03-11T13:47:11.948000+00:00",
+    "modified":"2015-03-11T13:47:11.948000+00:00",
+    "created_by":null,
+    "tag_urls":[
+    
+    ],
+    "ends_on":"2100-01-01T00:00:00+00:00",
+    "synopsis":"",
+    "version_url":"/api/episodes/film_a5e1022dfd874e169fd6da6597d0cd0f/versions/0/",
+    "parent_url":null,
+    "language_version_number":0,
+    "language_modified":"2015-03-11T13:47:11.948000+00:00"
+}

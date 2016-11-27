@@ -1,0 +1,43 @@
+{
+    "subtitle":null,
+    "uid":"film_f3018fc67bcc46eda60deeb5ec83b725",
+    "schedule_urls":[
+                     "/api/schedules/sche_9b9114fcffbc4b63acfe7ee9421cec40/"
+                     ],
+    "image_urls":[
+    
+    ],
+    "publish_on":"2014-10-24T00:00:00+00:00",
+    "talent_urls":[
+    
+    ],
+    "schedule_url":"/api/schedules/sche_9b9114fcffbc4b63acfe7ee9421cec40/",
+    "plan_urls":[
+    
+    ],
+    "language_publish_on":"2014-10-24T00:00:00+00:00",
+    "episode_number":null,
+    "language_modified_by":null,
+    "slug":"national-bicycle-week-begins-1923",
+    "language_version_url":"/api/episodes/film_f3018fc67bcc46eda60deeb5ec83b725/language-versions/0/",
+    "version_number":0,
+    "modified_by":null,
+    "language_ends_on":"2100-01-01T00:00:00+00:00",
+    "title":"National Bicycle Week Begins  Daily Sketch Topical Budget 613-2",
+    "items":[
+             "/api/assets/asse_585f0054fc444e49b9471181bab99939/"
+             ],
+    "self":"/api/episodes/film_f3018fc67bcc46eda60deeb5ec83b725/",
+    "created":"2014-10-25T13:01:58.291000+00:00",
+    "modified":"2014-10-25T13:01:58.291000+00:00",
+    "created_by":null,
+    "tag_urls":[
+    
+    ],
+    "ends_on":"2100-01-01T00:00:00+00:00",
+    "synopsis":"",
+    "version_url":"/api/episodes/film_f3018fc67bcc46eda60deeb5ec83b725/versions/0/",
+    "parent_url":null,
+    "language_version_number":0,
+    "language_modified":"2014-10-25T13:01:58.291000+00:00"
+}
