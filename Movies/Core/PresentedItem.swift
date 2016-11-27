@@ -1,5 +1,5 @@
 //
-//  MainController.swift
+//  PresentedItem.swift
 //  Movies
 //
 //  Created by Alexandre Malkov on 27/11/2016.
@@ -8,6 +8,9 @@
 
 import Foundation
 
-class MainController {
-    
+struct PresentedItem {
+    var uid: String
+    var title: String
+    var synopsis: String
+    var favorite: Bool
 }
