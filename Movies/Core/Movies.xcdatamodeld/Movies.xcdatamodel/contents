@@ -24,8 +24,8 @@
     </entity>
     <elements>
         <element name="Collection" positionX="-234" positionY="17" width="128" height="73"/>
-        <element name="Schedule" positionX="-11" positionY="-0" width="128" height="133"/>
-        <element name="Film" positionX="-2" positionY="282" width="128" height="103"/>
         <element name="Favorite" positionX="-207" positionY="297" width="128" height="73"/>
+        <element name="Film" positionX="-2" positionY="282" width="128" height="105"/>
+        <element name="Schedule" positionX="-11" positionY="-0" width="128" height="133"/>
     </elements>
 </model>

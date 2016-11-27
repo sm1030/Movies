@@ -31,7 +31,8 @@ class ResponseParser {
                 if fetchResults.count > 0 {
                     film = fetchResults[0] as! Film
                 } else {
-                    film = NSEntityDescription.insertNewObject(forEntityName: String(describing: Film.self), into: DataController.getContext()) as! Film
+                    let mo = NSEntityDescription.insertNewObject(forEntityName: String(describing: Film.self), into: DataController.getContext())
+                    film = mo as! Film
                 }
                 
                 film.uid = uid
