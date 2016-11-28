@@ -1,19 +1,19 @@
 //
-//  MoviesTests.swift
-//  MoviesTests
+//  FilmTests.swift
+//  Movies
 //
-//  Created by Alexandre Malkov on 27/11/2016.
+//  Created by Alexandre Malkov on 28/11/2016.
 //  Copyright © 2016 Alexandre Malkov. All rights reserved.
 //
 
 import XCTest
 @testable import Movies
 
-class MoviesTests: XCTestCase {
+class FilmTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        Film.deleteAll()
     }
     
     override func tearDown() {
@@ -21,10 +21,14 @@ class MoviesTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
+    func testAddFilm() {
+        let uid = "film_a5e1022dfd874e169fd6da6597d0cd0f"
+        var film = Film.getInstance(uid: uid)
+        XCTAssertNil(film)
+        let json = TestsHelper.readJsonFile(uid)
+        Film.loadFromJson(jsonString: json)
+        film = Film.getInstance(uid: uid)
+        XCTAssertNotNil(film)
     }
     
     func testPerformanceExample() {
@@ -33,7 +37,5 @@ class MoviesTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
-    
     
 }
