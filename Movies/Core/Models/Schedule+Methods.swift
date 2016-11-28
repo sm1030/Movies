@@ -11,19 +11,18 @@ import CoreData
 
 extension Schedule {
     
-    static func getInstance(uid: String) -> Schedule? {
+    static func getInstance(uid: String, insertNewIfNeeded: Bool = false) -> Schedule? {
         do {
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: Schedule.self))
             fetchRequest.predicate = NSPredicate(format: "uid = %@", uid)
             if let fetchResults = try DataController.getContext().fetch(fetchRequest) as? [Schedule] {
-                let schedule: Schedule
-                
                 if fetchResults.count > 0 {
-                    schedule = fetchResults[0]
+                    return fetchResults[0]
+                } else if insertNewIfNeeded {
+                    return NSEntityDescription.insertNewObject(forEntityName: String(describing: Schedule.self), into: DataController.getContext()) as? Schedule
                 } else {
-                    schedule = NSEntityDescription.insertNewObject(forEntityName: String(describing: Schedule.self), into: DataController.getContext()) as! Schedule
+                    return nil
                 }
-                return schedule
             }
         } catch let error {
             print("ERROR: \(error)")
@@ -105,7 +104,7 @@ extension Schedule {
             json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as! Dictionary<String, AnyObject>
             let uid: String = json["uid"] as! String
             
-            if let film = Film.getInstance(uid: uid) {
+            if let film = Film.getInstance(uid: uid, insertNewIfNeeded: true) {
                 film.uid = uid
                 film.title = json["title"] as? String
                 film.synopsis = json["synopsis"] as? String

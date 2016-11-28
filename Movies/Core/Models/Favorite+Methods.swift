@@ -11,19 +11,18 @@ import CoreData
 
 extension Favorite {
     
-    static func getInstance(uid: String) -> Favorite? {
+    static func getInstance(uid: String, insertNewIfNeeded: Bool = false) -> Favorite? {
         do {
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: Favorite.self))
-            fetchRequest.predicate = NSPredicate(format: "uid = %@", uid)
+            fetchRequest.predicate = NSPredicate(format: "film_uid = %@", uid)
             if let fetchResults = try DataController.getContext().fetch(fetchRequest) as? [Favorite] {
-                let favorite: Favorite
-                
                 if fetchResults.count > 0 {
-                    favorite = fetchResults[0]
+                    return fetchResults[0]
+                } else if insertNewIfNeeded {
+                    return NSEntityDescription.insertNewObject(forEntityName: String(describing: Favorite.self), into: DataController.getContext()) as? Favorite
                 } else {
-                    favorite = NSEntityDescription.insertNewObject(forEntityName: String(describing: Favorite.self), into: DataController.getContext()) as! Favorite
+                    return nil
                 }
-                return favorite
             }
         } catch let error {
             print("ERROR: \(error)")

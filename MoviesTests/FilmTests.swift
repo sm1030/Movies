@@ -17,25 +17,35 @@ class FilmTests: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
     func testAddFilm() {
-        let uid = "film_a5e1022dfd874e169fd6da6597d0cd0f"
-        var film = Film.getInstance(uid: uid)
+        // uid used in this test
+        let uid1 = "film_a5e1022dfd874e169fd6da6597d0cd0f"
+        let uid2 = "film_7a99b420e91e4513ac56cf12f3fb82f8"
+        
+        // Make sure that there is no record for uid1 and uid 2
+        var film = Film.getInstance(uid: uid1)
         XCTAssertNil(film)
-        let json = TestsHelper.readJsonFile(uid)
+        film = Film.getInstance(uid: uid2)
+        XCTAssertNil(film)
+        
+        // Load first uid
+        var json = TestsHelper.readJsonFile(uid1)
         Film.loadFromJson(jsonString: json)
-        film = Film.getInstance(uid: uid)
+        film = Film.getInstance(uid: uid1)
         XCTAssertNotNil(film)
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        XCTAssertEqual(film?.title, "Seeing the New Year In")
+        XCTAssertEqual(film?.synopsis, "")
+        
+        // Load second uid
+        json = TestsHelper.readJsonFile(uid2)
+        Film.loadFromJson(jsonString: json)
+        film = Film.getInstance(uid: uid2)
+        XCTAssertNotNil(film)
+        XCTAssertEqual(film?.title, "Christmas Celebrations and the Cruel Cat")
+        XCTAssertEqual(film?.synopsis, "")
     }
     
 }

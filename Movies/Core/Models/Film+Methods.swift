@@ -11,19 +11,18 @@ import CoreData
 
 extension Film {
 
-    static func getInstance(uid: String) -> Film? {
+    static func getInstance(uid: String, insertNewIfNeeded: Bool = false) -> Film? {
         do {
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: Film.self))
             fetchRequest.predicate = NSPredicate(format: "uid = %@", uid)
             if let fetchResults = try DataController.getContext().fetch(fetchRequest) as? [Film] {
-                let film: Film
-                
                 if fetchResults.count > 0 {
-                    film = fetchResults[0]
+                    return fetchResults[0]
+                } else if insertNewIfNeeded {
+                    return NSEntityDescription.insertNewObject(forEntityName: String(describing: Film.self), into: DataController.getContext()) as? Film
                 } else {
-                    film = NSEntityDescription.insertNewObject(forEntityName: String(describing: Film.self), into: DataController.getContext()) as! Film
+                    return nil
                 }
-                return film
             }
         } catch let error {
             print("ERROR: \(error)")
@@ -56,7 +55,7 @@ extension Film {
             json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as! Dictionary<String, AnyObject>
             let uid: String = json["uid"] as! String
             
-            if let film = Film.getInstance(uid: uid) {
+            if let film = Film.getInstance(uid: uid, insertNewIfNeeded: true) {
                 film.uid = uid
                 film.title = json["title"] as? String
                 film.synopsis = json["synopsis"] as? String
