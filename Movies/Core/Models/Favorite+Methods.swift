@@ -19,7 +19,9 @@ extension Favorite {
                 if fetchResults.count > 0 {
                     return fetchResults[0]
                 } else if insertNewIfNeeded {
-                    return NSEntityDescription.insertNewObject(forEntityName: String(describing: Favorite.self), into: DataController.getContext()) as? Favorite
+                    let favorite = NSEntityDescription.insertNewObject(forEntityName: String(describing: Favorite.self), into: DataController.getContext()) as? Favorite
+                    favorite?.film_uid = uid
+                    return favorite
                 } else {
                     return nil
                 }
@@ -32,19 +34,19 @@ extension Favorite {
     }
     
     static func deleteAll() {
+        for favorite in Favorite.getAll() ?? [Favorite]() {
+            DataController.getContext().delete(favorite)
+        }
+    }
+    
+    static func getAll() -> [Favorite]? {
         do {
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: Favorite.self))
-            fetchRequest.predicate = NSPredicate()
-            if let fetchResults = try DataController.getContext().fetch(fetchRequest) as? [Favorite] {
-                if fetchResults.count > 0 {
-                    for favorite in fetchResults {
-                        DataController.getContext().delete(favorite)
-                    }
-                }
-            }
+            let fetchRequest: NSFetchRequest<Favorite> = Favorite.fetchRequest()
+            return try DataController.getContext().fetch(fetchRequest)
         } catch let error {
             print("ERROR: \(error)")
         }
+        return nil
     }
     
 }

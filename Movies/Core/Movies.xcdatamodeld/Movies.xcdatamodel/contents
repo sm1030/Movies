@@ -11,8 +11,8 @@
         <attribute name="uid" attributeType="String" indexed="YES" syncable="YES"/>
     </entity>
     <entity name="Schedule" representedClassName="Schedule" syncable="YES" codeGenerationType="class">
-        <attribute name="content_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="divider" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="film_uid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="heading" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="uid" attributeType="String" indexed="YES" syncable="YES"/>

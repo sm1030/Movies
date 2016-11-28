@@ -19,7 +19,9 @@ extension Film {
                 if fetchResults.count > 0 {
                     return fetchResults[0]
                 } else if insertNewIfNeeded {
-                    return NSEntityDescription.insertNewObject(forEntityName: String(describing: Film.self), into: DataController.getContext()) as? Film
+                    let film = NSEntityDescription.insertNewObject(forEntityName: String(describing: Film.self), into: DataController.getContext()) as? Film
+                    film?.uid = uid
+                    return film
                 } else {
                     return nil
                 }
@@ -32,20 +34,19 @@ extension Film {
     }
     
     static func deleteAll() {
+        for film in Film.getAll() ?? [Film]() {
+            DataController.getContext().delete(film)
+        }
+    }
+    
+    static func getAll() -> [Film]? {
         do {
             let fetchRequest: NSFetchRequest<Film> = Film.fetchRequest()
-            let fetchResults = try DataController.getContext().fetch(fetchRequest)
-
-            if fetchResults.count > 0 {
-                for film in fetchResults {
-                    DataController.getContext().delete(film)
-                }
-            }
-            
-            DataController.saveContext()
+            return try DataController.getContext().fetch(fetchRequest)
         } catch let error {
             print("ERROR: \(error)")
         }
+        return nil
     }
     
     static func loadFromJson(jsonString: String) {
@@ -56,7 +57,6 @@ extension Film {
             let uid: String = json["uid"] as! String
             
             if let film = Film.getInstance(uid: uid, insertNewIfNeeded: true) {
-                film.uid = uid
                 film.title = json["title"] as? String
                 film.synopsis = json["synopsis"] as? String
                 DataController.saveContext()
