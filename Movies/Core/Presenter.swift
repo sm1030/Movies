@@ -68,7 +68,7 @@ class Presenter: ApiServiceDelegate {
         }
     }
     
-    func getItyemForIndexPath(indexPath: NSIndexPath) -> PresentedItem {
+    func getItyemForIndexPath(indexPath: IndexPath) -> PresentedItem {
         if favoriteMode {
             let films = getFavoriteFilms()
             if films.count > indexPath.row {
@@ -106,7 +106,7 @@ class Presenter: ApiServiceDelegate {
         return favoriteFilms
     }
     
-    func toggleFavorite(indexPath: NSIndexPath) {
+    func toggleFavorite(indexPath: IndexPath) {
         let item = getItyemForIndexPath(indexPath: indexPath)
         Favorite.toggleFavorite(film_uid: item.uid)
     }

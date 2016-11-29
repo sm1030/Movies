@@ -46,7 +46,7 @@ class ApiService {
     
     func requestFilmData(film_uid: String?) {
         if film_uid != nil {
-            let url = "http://feature-code-test.skylark-cms.qa.aws.ostmodern.co.uk:8000/api/episodes/\(film_uid)/"
+            let url = "http://feature-code-test.skylark-cms.qa.aws.ostmodern.co.uk:8000/api/episodes/" + film_uid! + "/"
             
             Alamofire.request(url).responseJSON { response in
                 
