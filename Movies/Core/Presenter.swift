@@ -15,7 +15,7 @@ protocol PresenterDelegate: class {
 
 class Presenter: ApiServiceDelegate {
     
-    static let presenter = Presenter()
+    static let sharedInstance = Presenter()
     
     weak var delegate: PresenterDelegate?
     var api: ApiService?
@@ -109,5 +109,6 @@ class Presenter: ApiServiceDelegate {
     func toggleFavorite(indexPath: IndexPath) {
         let item = getItyemForIndexPath(indexPath: indexPath)
         Favorite.toggleFavorite(film_uid: item.uid)
+        delegate?.presenterDataUpdated()
     }
 }

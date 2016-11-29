@@ -45,6 +45,7 @@ extension Favorite {
         } else {
             _ = Favorite.getInstance(film_uid: film_uid, insertNewIfNeeded: true)
         }
+        DataController.saveContext()
     }
     
     static func isFavorite(film_uid: String) -> Bool {

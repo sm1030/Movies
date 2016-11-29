@@ -10,7 +10,7 @@ import UIKit
 
 class MainTableViewController: UITableViewController, PresenterDelegate {
 
-    let presenter = Presenter()
+    let presenter = Presenter.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,11 +68,16 @@ class MainTableViewController: UITableViewController, PresenterDelegate {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! MainTableViewCell
 
         let item = presenter.getItyemForIndexPath(indexPath: indexPath)
         
-//        cell.textLabel?.text = item.title
+        cell.indexPath = indexPath
+        cell.titleLabel.text = item.title
+        cell.synopsisLabel.text = item.synopsis
+        
+        let buttonImage = item.favorite ? UIImage(named: "HeartOn") : UIImage(named: "HeartOff")
+        cell.favoriteButton.setBackgroundImage(buttonImage, for: .normal)
 
         return cell
     }

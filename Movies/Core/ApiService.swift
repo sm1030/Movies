@@ -38,6 +38,9 @@ class ApiService {
                     self.requestFilmData(film_uid: schedule.film_uid)
                 }
                 
+                // Save changes
+                DataController.saveContext()
+                
                 // Notify delegate
                 self.delegate?.apiServiceDataReceived()
             }

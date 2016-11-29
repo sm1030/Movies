@@ -10,6 +10,13 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var synopsisLabel: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
+
+    
+    var indexPath: IndexPath = IndexPath()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +26,11 @@ class MainTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func favoriteAction(_ sender: Any) {
+        let presenter = Presenter.sharedInstance
+        presenter.toggleFavorite(indexPath: indexPath)
     }
 
 }
