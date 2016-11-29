@@ -89,14 +89,14 @@ class PresenterTests: XCTestCase {
         
         // Favorite Mode
         presenter.favoriteMode = true
-        var item = presenter.getItyemForIndexPath(indexPath: NSIndexPath(row: 2, section: 0))
+        var item = presenter.getItyemForIndexPath(indexPath: IndexPath(row: 2, section: 0))
         XCTAssertEqual(item.title, "Little Red Riding Hood Up-to-date")
         XCTAssertEqual(item.synopsis, "")
         XCTAssertEqual(item.favorite, true)
         
         // Home Mode
         presenter.favoriteMode = false
-        item = presenter.getItyemForIndexPath(indexPath: NSIndexPath(row: 0, section: 0))
+        item = presenter.getItyemForIndexPath(indexPath: IndexPath(row: 0, section: 0))
         XCTAssertEqual(item.title, "Seeing the New Year In")
         XCTAssertEqual(item.synopsis, "")
         XCTAssertEqual(item.favorite, true)
@@ -110,16 +110,16 @@ class PresenterTests: XCTestCase {
         // Before toggle
         presenter.favoriteMode = true
         XCTAssertEqual(presenter.getRowsForSection(0), 3)
-        var item = presenter.getItyemForIndexPath(indexPath: NSIndexPath(row: 1, section: 0))
+        var item = presenter.getItyemForIndexPath(indexPath: IndexPath(row: 1, section: 0))
         XCTAssertEqual(item.title, "National Bicycle Week Begins  Daily Sketch Topical Budget 613-2")
         
         // Perform toggle
-        presenter.toggleFavorite(indexPath: NSIndexPath(row: 1, section: 0))
+        presenter.toggleFavorite(indexPath: IndexPath(row: 1, section: 0))
         
         // After toggle
         presenter.favoriteMode = true
         XCTAssertEqual(presenter.getRowsForSection(0), 2)
-        item = presenter.getItyemForIndexPath(indexPath: NSIndexPath(row: 1, section: 0))
+        item = presenter.getItyemForIndexPath(indexPath: IndexPath(row: 1, section: 0))
         XCTAssertEqual(item.title, "Little Red Riding Hood Up-to-date")
     }
     

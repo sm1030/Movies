@@ -39,8 +39,8 @@
                                                 <action selector="favoriteAction:" destination="IVc-ST-Iav" eventType="touchUpInside" id="srG-Xk-G7Z"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Episode Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBR-hg-tqJ">
-                                            <rect key="frame" x="103" y="11" width="270" height="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBR-hg-tqJ">
+                                            <rect key="frame" x="105" y="8" width="99" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="UeP-fY-2gZ"/>
                                             </constraints>
