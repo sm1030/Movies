@@ -13,17 +13,30 @@
         <scene sceneID="KIy-DX-Gqe">
             <objects>
                 <tableViewController id="DEL-c1-DW9" customClass="MainTableViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xct-wM-ekV">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="xct-wM-ekV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainCell" id="IVc-ST-Iav" customClass="MainTableViewCell" customModule="Movies" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainCell" rowHeight="100" id="IVc-ST-Iav" customClass="MainTableViewCell" customModule="Movies" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IVc-ST-Iav" id="AAI-5L-Nnj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="1mC-Rt-PDI">
+                                            <rect key="frame" x="5" y="5" width="90" height="89.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="85l-aN-zfu"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1mC-Rt-PDI" firstAttribute="top" secondItem="AAI-5L-Nnj" secondAttribute="top" constant="5" id="1b1-J0-u5W"/>
+                                        <constraint firstItem="1mC-Rt-PDI" firstAttribute="leading" secondItem="AAI-5L-Nnj" secondAttribute="leading" constant="5" id="B8q-kn-Ajf"/>
+                                        <constraint firstAttribute="bottom" secondItem="1mC-Rt-PDI" secondAttribute="bottom" constant="5" id="RLx-F0-V8z"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -36,7 +49,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MpO-zf-j3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204" y="139"/>
+            <point key="canvasLocation" x="-204" y="138.98050974512745"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CAe-o9-wxa">
@@ -73,4 +86,7 @@
             <point key="canvasLocation" x="-1156" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="79" height="79"/>
+    </resources>
 </document>

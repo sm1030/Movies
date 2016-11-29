@@ -72,7 +72,7 @@ class MainTableViewController: UITableViewController, PresenterDelegate {
 
         let item = presenter.getItyemForIndexPath(indexPath: indexPath)
         
-        cell.textLabel?.text = item.title
+//        cell.textLabel?.text = item.title
 
         return cell
     }
