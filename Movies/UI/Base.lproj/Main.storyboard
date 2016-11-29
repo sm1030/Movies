@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="-204" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="hpo-EB-r9E">
             <objects>
-                <viewController id="4OT-3B-lWA" sceneMemberID="viewController">
+                <viewController id="4OT-3B-lWA" customClass="DetailsViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hZl-gM-fav"/>
                         <viewControllerLayoutGuide type="bottom" id="4oB-Ne-8H0"/>
@@ -108,18 +108,56 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="yQ4-3K-3oo">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="sqk-zV-KbU"/>
-                                    </navigationItem>
+                                    <navigationItem title="Title" id="yQ4-3K-3oo"/>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Video" translatesAutoresizingMaskIntoConstraints="NO" id="EDC-Zn-JjL">
+                                <rect key="frame" x="10" y="74" width="355" height="258"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="258" id="dgS-sR-ZGq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfc-lN-nQP">
+                                <rect key="frame" x="16" y="340" width="343" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="cSv-Et-BtM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sa6-Ra-wRU">
+                                <rect key="frame" x="16" y="407" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Qd9-Gj-cIb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EDC-Zn-JjL" firstAttribute="leading" secondItem="PK7-KI-jms" secondAttribute="leading" constant="10" id="5YJ-AG-o0A"/>
+                            <constraint firstAttribute="trailing" secondItem="EDC-Zn-JjL" secondAttribute="trailing" constant="10" id="C4n-VS-rk7"/>
+                            <constraint firstAttribute="trailing" secondItem="Sa6-Ra-wRU" secondAttribute="trailing" constant="16" id="De3-zy-qFq"/>
+                            <constraint firstItem="Sa6-Ra-wRU" firstAttribute="top" secondItem="qfc-lN-nQP" secondAttribute="bottom" constant="8" id="Fpb-AY-vS6"/>
+                            <constraint firstItem="EDC-Zn-JjL" firstAttribute="top" secondItem="hZl-gM-fav" secondAttribute="bottom" constant="10" id="JDg-TG-QI3"/>
+                            <constraint firstItem="Sa6-Ra-wRU" firstAttribute="leading" secondItem="PK7-KI-jms" secondAttribute="leading" constant="16" id="SNp-94-pHW"/>
+                            <constraint firstItem="qfc-lN-nQP" firstAttribute="top" secondItem="EDC-Zn-JjL" secondAttribute="bottom" constant="8" id="Yzj-hU-plh"/>
+                            <constraint firstItem="qfc-lN-nQP" firstAttribute="leading" secondItem="PK7-KI-jms" secondAttribute="leading" constant="16" id="jK1-3p-og9"/>
+                            <constraint firstAttribute="trailing" secondItem="qfc-lN-nQP" secondAttribute="trailing" constant="16" id="jsP-RI-ERU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="synopsisLabel" destination="Sa6-Ra-wRU" id="J9C-fF-lEz"/>
+                        <outlet property="titleLabel" destination="qfc-lN-nQP" id="s7F-eo-5oQ"/>
+                        <outlet property="videoImage" destination="EDC-Zn-JjL" id="RYP-kE-8tC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1C-bU-oGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610" y="139"/>
+            <point key="canvasLocation" x="608.79999999999995" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7WU-Oy-SOm">
@@ -141,5 +179,6 @@
     <resources>
         <image name="HeartOff" width="22" height="18"/>
         <image name="Image" width="79" height="79"/>
+        <image name="Video" width="335" height="241"/>
     </resources>
 </document>

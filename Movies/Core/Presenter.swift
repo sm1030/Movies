@@ -20,6 +20,7 @@ class Presenter: ApiServiceDelegate {
     weak var delegate: PresenterDelegate?
     var api: ApiService?
     var favoriteMode = false
+    var selectetIndexPath = IndexPath()
     
     func pullUpdates() {
         if api == nil {

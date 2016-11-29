@@ -15,7 +15,6 @@ class MainTableViewController: UITableViewController, PresenterDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.delegate = self
-        self.clearsSelectionOnViewWillAppear = false
         presenter.pullUpdates()
         updatePageTitle()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks,
@@ -84,6 +83,7 @@ class MainTableViewController: UITableViewController, PresenterDelegate {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.selectetIndexPath = indexPath
         performSegue(withIdentifier: "showDetails", sender: self)
     }
  
