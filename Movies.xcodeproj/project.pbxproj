@@ -12,6 +12,7 @@
 		515218D41DEC96CD00DF897F /* ScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515218D31DEC96CD00DF897F /* ScheduleTests.swift */; };
 		515218D61DECD61D00DF897F /* FavoriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515218D51DECD61D00DF897F /* FavoriteTests.swift */; };
 		515218D81DECDECD00DF897F /* PresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515218D71DECDECD00DF897F /* PresenterTests.swift */; };
+		515218DA1DED09E600DF897F /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515218D91DED09E600DF897F /* ApiService.swift */; };
 		5163593B1DEB391C00D4FEF5 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5163592F1DEB391C00D4FEF5 /* Presenter.swift */; };
 		5163593E1DEB391C00D4FEF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516359301DEB391C00D4FEF5 /* AppDelegate.swift */; };
 		516359411DEB391C00D4FEF5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516359311DEB391C00D4FEF5 /* DataController.swift */; };
@@ -75,6 +76,7 @@
 		515218D31DEC96CD00DF897F /* ScheduleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTests.swift; sourceTree = "<group>"; };
 		515218D51DECD61D00DF897F /* FavoriteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTests.swift; sourceTree = "<group>"; };
 		515218D71DECDECD00DF897F /* PresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterTests.swift; sourceTree = "<group>"; };
+		515218D91DED09E600DF897F /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		5163592F1DEB391C00D4FEF5 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		516359301DEB391C00D4FEF5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		516359311DEB391C00D4FEF5 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				516359301DEB391C00D4FEF5 /* AppDelegate.swift */,
 				516359311DEB391C00D4FEF5 /* DataController.swift */,
 				516359801DEB5BAD00D4FEF5 /* PresentedItem.swift */,
+				515218D91DED09E600DF897F /* ApiService.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				51B4135E1DEBA651005000A6 /* Schedule+Methods.swift in Sources */,
 				5163593E1DEB391C00D4FEF5 /* AppDelegate.swift in Sources */,
 				5163593B1DEB391C00D4FEF5 /* Presenter.swift in Sources */,
+				515218DA1DED09E600DF897F /* ApiService.swift in Sources */,
 				51B4135A1DEB9EC1005000A6 /* Film+Methods.swift in Sources */,
 				516359411DEB391C00D4FEF5 /* DataController.swift in Sources */,
 				51B413511DEB96FD005000A6 /* Movies.xcdatamodeld in Sources */,

@@ -51,9 +51,13 @@ extension Film {
     
     static func loadFromJson(jsonString: String) {
         let data = jsonString.data(using: .utf8)
+        Film.loadFromJson(jsonData: data)
+    }
+    
+    static func loadFromJson(jsonData: Data?) {
         var json: Dictionary<String, AnyObject>
         do {
-            json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as! Dictionary<String, AnyObject>
+            json = try JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions()) as! Dictionary<String, AnyObject>
             let uid: String = json["uid"] as! String
             
             if let film = Film.getInstance(uid: uid, insertNewIfNeeded: true) {

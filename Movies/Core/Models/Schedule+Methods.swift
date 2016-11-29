@@ -100,8 +100,12 @@ extension Schedule {
     
     static func loadFromJson(jsonString: String) {
         let data = jsonString.data(using: .utf8)
+        Schedule.loadFromJson(jsonData: data)
+    }
+    
+    static func loadFromJson(jsonData: Data?) {
         do {
-            let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as? Dictionary<String, AnyObject>
+            let json = try JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions()) as? Dictionary<String, AnyObject>
             let objects = json?["objects"] as? Array<Dictionary<String, AnyObject>>
             if (objects?.count)! > 0 {
                 if let collection = objects?[0] {

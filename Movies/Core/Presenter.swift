@@ -9,18 +9,28 @@
 import Foundation
 import CoreData
 
-protocol PresenterDelegate {
-    func dataUpdated()
+protocol PresenterDelegate: class {
+    func presenterDataUpdated()
 }
 
-class Presenter {
+class Presenter: ApiServiceDelegate {
     
     static let presenter = Presenter()
     
+    weak var delegate: PresenterDelegate?
+    var api: ApiService?
     var favoriteMode = false
     
     func pullUpdates() {
+        if api == nil {
+            api = ApiService(delegate: self)
+        }
         
+        api?.requestHomeData()
+    }
+    
+    func apiServiceDataReceived() {
+        delegate?.presenterDataUpdated()
     }
     
     func getSectionsCount() -> Int {
