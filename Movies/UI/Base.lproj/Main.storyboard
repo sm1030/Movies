@@ -84,28 +84,42 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="ViO-NQ-Z68"/>
+                    <connections>
+                        <segue destination="4OT-3B-lWA" kind="show" identifier="showDetails" id="hzI-NZ-1DI"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MpO-zf-j3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-204" y="138.98050974512745"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="CAe-o9-wxa">
+        <scene sceneID="hpo-EB-r9E">
             <objects>
-                <viewController id="zfh-r6-5V8" sceneMemberID="viewController">
+                <viewController id="4OT-3B-lWA" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xxw-cA-UN8"/>
-                        <viewControllerLayoutGuide type="bottom" id="LKm-tG-HQx"/>
+                        <viewControllerLayoutGuide type="top" id="hZl-gM-fav"/>
+                        <viewControllerLayoutGuide type="bottom" id="4oB-Ne-8H0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1T8-aP-LyT">
+                    <view key="view" contentMode="scaleToFill" id="PK7-KI-jms">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ju1-d6-JWa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="yQ4-3K-3oo">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="sqk-zV-KbU"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="02b-Bl-90e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1C-bU-oGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="467" y="143"/>
+            <point key="canvasLocation" x="610" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7WU-Oy-SOm">
