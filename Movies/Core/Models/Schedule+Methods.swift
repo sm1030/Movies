@@ -36,6 +36,7 @@ extension Schedule {
     static func getAll() -> [Schedule]? {
         do {
             let fetchRequest: NSFetchRequest<Schedule> = Schedule.fetchRequest()
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "position", ascending: true)]
             return try DataController.getContext().fetch(fetchRequest)
         } catch let error {
             print("ERROR: \(error)")

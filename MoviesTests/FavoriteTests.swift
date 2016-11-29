@@ -29,24 +29,29 @@ class FavoriteTests: XCTestCase {
         XCTAssertEqual(Favorite.getAll()?.count, 0)
         
         // Load first uid
-        var favorite = Favorite.getInstance(uid: uid1, insertNewIfNeeded: true)
+        var favorite = Favorite.getInstance(film_uid: uid1, insertNewIfNeeded: true)
         XCTAssertNotNil(favorite)
         XCTAssertEqual(favorite?.film_uid, uid1)
-        XCTAssertEqual(favorite?.value, false)
-        
-        // Update first uid
-        favorite?.value = true
         
         // Load second uid
-        favorite = Favorite.getInstance(uid: uid2, insertNewIfNeeded: true)
+        favorite = Favorite.getInstance(film_uid: uid2, insertNewIfNeeded: true)
         XCTAssertNotNil(favorite)
         XCTAssertEqual(favorite?.film_uid, uid2)
-        XCTAssertEqual(favorite?.value, false)
         
-        // Check first item value
-        favorite = Favorite.getInstance(uid: uid1)
-        XCTAssertNotNil(favorite)
-        XCTAssertEqual(favorite?.value, true)
+        // Delete first favorite
+        Favorite.deleteInstance(film_uid: uid1)
+        
+        // Make sure first item is gone, but second still exists
+        XCTAssertEqual(Favorite.isFavorite(film_uid: uid1), false)
+        XCTAssertEqual(Favorite.isFavorite(film_uid: uid2), true)
+        
+        // Toggle both favorites
+        Favorite.toggleFavorite(film_uid: uid1)
+        Favorite.toggleFavorite(film_uid: uid2)
+        
+        // Now we should have revirsed values
+        XCTAssertEqual(Favorite.isFavorite(film_uid: uid1), true)
+        XCTAssertEqual(Favorite.isFavorite(film_uid: uid2), false)
     }
     
 }

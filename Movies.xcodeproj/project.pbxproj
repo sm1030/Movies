@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		515218D41DEC96CD00DF897F /* ScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515218D31DEC96CD00DF897F /* ScheduleTests.swift */; };
 		515218D61DECD61D00DF897F /* FavoriteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515218D51DECD61D00DF897F /* FavoriteTests.swift */; };
+		515218D81DECDECD00DF897F /* PresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515218D71DECDECD00DF897F /* PresenterTests.swift */; };
 		5163593B1DEB391C00D4FEF5 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5163592F1DEB391C00D4FEF5 /* Presenter.swift */; };
 		5163593E1DEB391C00D4FEF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516359301DEB391C00D4FEF5 /* AppDelegate.swift */; };
 		516359411DEB391C00D4FEF5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516359311DEB391C00D4FEF5 /* DataController.swift */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		515218D31DEC96CD00DF897F /* ScheduleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTests.swift; sourceTree = "<group>"; };
 		515218D51DECD61D00DF897F /* FavoriteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTests.swift; sourceTree = "<group>"; };
+		515218D71DECDECD00DF897F /* PresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterTests.swift; sourceTree = "<group>"; };
 		5163592F1DEB391C00D4FEF5 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		516359301DEB391C00D4FEF5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		516359311DEB391C00D4FEF5 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				51B413611DEBAFDD005000A6 /* TestsHelper.swift */,
 				515218D31DEC96CD00DF897F /* ScheduleTests.swift */,
 				515218D51DECD61D00DF897F /* FavoriteTests.swift */,
+				515218D71DECDECD00DF897F /* PresenterTests.swift */,
 			);
 			path = MoviesTests;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			files = (
 				51B413621DEBAFDD005000A6 /* TestsHelper.swift in Sources */,
 				5189DAD41DEAFDC800A3BBAA /* MoviesTests.swift in Sources */,
+				515218D81DECDECD00DF897F /* PresenterTests.swift in Sources */,
 				515218D41DEC96CD00DF897F /* ScheduleTests.swift in Sources */,
 				515218D61DECD61D00DF897F /* FavoriteTests.swift in Sources */,
 				51B413601DEBAEA6005000A6 /* FilmTests.swift in Sources */,
