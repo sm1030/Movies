@@ -9,11 +9,11 @@
 import Foundation
 import CoreData
 
-protocol PresenterDelegate: class {
+protocol PresenterDelegate : class {
     func presenterDataUpdated()
 }
 
-class Presenter: ApiServiceDelegate {
+class Presenter {
     
     static let sharedInstance = Presenter()
     
@@ -28,10 +28,6 @@ class Presenter: ApiServiceDelegate {
         }
         
         api?.requestHomeData()
-    }
-    
-    func apiServiceDataReceived() {
-        delegate?.presenterDataUpdated()
     }
     
     func getSectionsCount() -> Int {
@@ -110,6 +106,13 @@ class Presenter: ApiServiceDelegate {
     func toggleFavorite(indexPath: IndexPath) {
         let item = getItyemForIndexPath(indexPath: indexPath)
         Favorite.toggleFavorite(film_uid: item.uid)
+        delegate?.presenterDataUpdated()
+    }
+}
+
+extension Presenter : ApiServiceDelegate {
+    
+    func apiServiceDataReceived() {
         delegate?.presenterDataUpdated()
     }
 }

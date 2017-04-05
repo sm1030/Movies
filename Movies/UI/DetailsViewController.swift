@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController : UIViewController {
 
     @IBOutlet weak var videoImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

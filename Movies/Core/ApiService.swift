@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-protocol ApiServiceDelegate: class {
+protocol ApiServiceDelegate : class {
     func apiServiceDataReceived()
 }
 
