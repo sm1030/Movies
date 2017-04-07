@@ -25,6 +25,14 @@ class Presenter {
     func pullUpdates() {
         if api == nil {
             api = ApiService(delegate: self)
+            
+            #if MOCKUP
+                api?.useMockUpData = true
+                
+                Schedule.deleteAll()
+                Film.deleteAll()
+                Favorite.deleteAll()
+            #endif
         }
         
         api?.requestHomeData()

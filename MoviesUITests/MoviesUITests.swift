@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Alamofire
 
 class MoviesUITests: XCTestCase {
         
@@ -31,6 +32,37 @@ class MoviesUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        
+//        let app = XCUIApplication()
+//        let tablesQuery = app.tables
+//        tablesQuery.staticTexts["Seeing the New Year In"].tap()
+//        app.navigationBars["Episode details"].buttons["Home"].tap()
+//
+//        let bookmarksButton = app.navigationBars["Home"].buttons["Bookmarks"]
+//        bookmarksButton.tap()
+//
+////        let bookmarksButton2 = app.navigationBars["Favorites"].buttons["Bookmarks"]
+////        bookmarksButton2.tap()
+////        tablesQuery.cells.containing(.staticText, identifier:"Bootle May Day Demonstration and Crowning of the May Queen (1903)").buttons["HeartOff"].tap()
+////        bookmarksButton.tap()
+////        bookmarksButton2.tap()
+////        bookmarksButton.tap()
+////        tablesQuery.cells.containing(.staticText, identifier:"Christmas Celebrations and the Cruel Cat").buttons["HeartOn"].tap()
+////        tablesQuery.buttons["HeartOn"].tap()
+////        bookmarksButton2.tap()
+        
+        
+        
+        let app = XCUIApplication()
+        app.tables.staticTexts["Seeing the New Year In"].tap()
+        app.navigationBars["Episode details"].buttons["Home"].tap()
+        
+        app.navigationBars["Home"].buttons["Bookmarks"].tap()
+        app.navigationBars["Favorites"].buttons["Bookmarks"].tap()
+        
+        
     }
     
 }
